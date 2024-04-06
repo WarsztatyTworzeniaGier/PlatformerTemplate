@@ -20,7 +20,11 @@ namespace MyBox.Internal
 
         private void OnDisable()
         {
-            _foldout?.OnDisable();
+            if (_foldout != null)
+            {
+                _foldout?.OnDisable();
+
+            }
         }
 
         public override void OnInspectorGUI()
