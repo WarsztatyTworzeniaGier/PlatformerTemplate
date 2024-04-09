@@ -19,7 +19,7 @@ MonoBehaviour:
   _useAcceleration: 1
   _acceleration: 6
   _deceleration: 30
-  _jumpHeight: 2.25
+  _jumpHeight: 2
   _timeToApex: 0.47
   _downwardMovementMultiplier: 1
   _variableJumpHeight: 1

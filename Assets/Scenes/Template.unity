@@ -1013,7 +1013,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.22, y: -2.79, z: -5.5}
+  m_LocalPosition: {x: -10.35, y: -1.6700001, z: -5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1396,7 +1396,7 @@ MonoBehaviour:
     m_ActionName: Player/Full Screen[/Keyboard/f]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1237381654}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: quitScript, Assembly-CSharp
         m_MethodName: quitButton
         m_Mode: 0
@@ -121163,11 +121163,11 @@ Tilemap:
       e00: 0
       e01: 0
       e02: 0
-      e03: 3.602284e-27
+      e03: 0.000000081353505
       e10: 0
       e11: 0
       e12: 0
-      e13: 2.31e-43
+      e13: 2.05e-43
       e20: 0
       e21: 0
       e22: 0
@@ -121176,34 +121176,16 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 0
-  - m_RefCount: 0
-    m_Data:
-      e00: 0
-      e01: 0
-      e02: 2.0328811e-19
-      e03: 2.0328811e-19
-      e10: 0
-      e11: 0
-      e12: 8.79e-43
-      e13: 8.79e-43
-      e20: -2.0765082e+33
-      e21: 0.000005964139
-      e22: -6.254424e-29
-      e23: 2.0692368
-      e30: 4.5904e-41
-      e31: 8.81e-43
-      e32: 8.79e-43
-      e33: 8.81e-43
   - m_RefCount: 0
     m_Data:
       e00: 0
       e01: 0
       e02: 0
-      e03: 3.602284e-27
+      e03: 0.000000081353505
       e10: 0
       e11: 0
       e12: 0
-      e13: 2.31e-43
+      e13: 2.05e-43
       e20: 0
       e21: 0
       e22: 0
@@ -121216,20 +121198,38 @@ Tilemap:
     m_Data:
       e00: 0
       e01: 0
-      e02: 2.0328811e-19
-      e03: 2.0328811e-19
+      e02: 0
+      e03: 0.000000081353505
       e10: 0
       e11: 0
-      e12: 8.79e-43
-      e13: 8.79e-43
-      e20: -2.0765082e+33
-      e21: 0.000005964139
-      e22: -7.421229e-29
-      e23: 2.0692368
-      e30: 4.5904e-41
-      e31: 8.81e-43
-      e32: 8.79e-43
-      e33: 8.81e-43
+      e12: 0
+      e13: 2.05e-43
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+  - m_RefCount: 0
+    m_Data:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0.0000000811948
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 2.05e-43
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
   - m_RefCount: 1
     m_Data:
       e00: -1
@@ -122789,7 +122789,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237381655}
-  - component: {fileID: 1237381654}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -122797,18 +122796,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1237381654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237381653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c101c5912cdbf4a34b4cfb13aa636391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1237381655
 RectTransform:
   m_ObjectHideFlags: 0
@@ -124012,7 +123999,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1237381654}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: quitScript, Assembly-CSharp
         m_MethodName: quitGame
         m_Mode: 1
@@ -124227,7 +124214,7 @@ Transform:
   m_GameObject: {fileID: 1945790296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.22, y: -2.79, z: -5.5}
+  m_LocalPosition: {x: -10.35, y: -1.6700001, z: -5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -129106,11 +129093,11 @@ PrefabInstance:
       objectReference: {fileID: 1023269679}
     - target: {fileID: 4857407142272312785, guid: d2a73255bd5c26a4ea48f89a38ae1f22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.22
+      value: -10.35
       objectReference: {fileID: 0}
     - target: {fileID: 4857407142272312785, guid: d2a73255bd5c26a4ea48f89a38ae1f22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.29
+      value: -3.17
       objectReference: {fileID: 0}
     - target: {fileID: 4857407142272312785, guid: d2a73255bd5c26a4ea48f89a38ae1f22, type: 3}
       propertyPath: m_LocalPosition.z
@@ -129147,6 +129134,10 @@ PrefabInstance:
     - target: {fileID: 8025914585056503322, guid: d2a73255bd5c26a4ea48f89a38ae1f22, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025914585056503322, guid: d2a73255bd5c26a4ea48f89a38ae1f22, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9046155318843656021, guid: d2a73255bd5c26a4ea48f89a38ae1f22, type: 3}
       propertyPath: myLimit
