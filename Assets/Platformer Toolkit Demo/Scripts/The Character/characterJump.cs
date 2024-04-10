@@ -135,6 +135,7 @@ namespace GMTK.PlatformerToolkit
             }
         }
 
+
         private void SetPhysics()
         {
             //Determine the character's gravity scale, using the stats provided. Multiply it by a gravMultiplier, used later
@@ -276,5 +277,6 @@ namespace GMTK.PlatformerToolkit
             //Used by the springy pad
             body.AddForce(Vector2.up * bounceAmount, ForceMode2D.Impulse);
         }
+
     }
 }
