@@ -124,7 +124,7 @@ namespace GMTK.PlatformerToolkit
             onGround = ground.GetOnGround();
 
             //Get the Rigidbody's current velocity
-            velocity = body.velocity;
+            velocity = body.linearVelocity;
 
             //Calculate movement, depending on whether "Instant Movement" has been checked
             if (useAcceleration)
@@ -175,7 +175,7 @@ namespace GMTK.PlatformerToolkit
             velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
 
             //Update the Rigidbody with this new velocity
-            body.velocity = velocity;
+            body.linearVelocity = velocity;
         }
 
         private void RunWithoutAcceleration()
@@ -183,7 +183,7 @@ namespace GMTK.PlatformerToolkit
             //If we're not using acceleration and deceleration, just send our desired velocity (direction * max speed) to the Rigidbody
             velocity.x = desiredVelocity.x;
 
-            body.velocity = velocity;
+            body.linearVelocity = velocity;
         }
     }
 }

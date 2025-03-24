@@ -65,7 +65,7 @@ namespace GMTK.PlatformerToolkit
                     //If it's spikes, stop the character's velocity
                     if (collision.gameObject.layer == 8)
                     {
-                        body.velocity = Vector2.zero;
+                        body.linearVelocity = Vector2.zero;
                     }
 
                     hurting = true;

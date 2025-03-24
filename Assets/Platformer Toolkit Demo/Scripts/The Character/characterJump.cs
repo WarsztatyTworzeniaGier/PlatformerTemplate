@@ -146,13 +146,13 @@ namespace GMTK.PlatformerToolkit
         private void FixedUpdate()
         {
             //Get velocity from Kit's Rigidbody
-            velocity = body.velocity;
+            velocity = body.linearVelocity;
 
             //Keep trying to do a jump, for as long as desiredJump is true
             if (desiredJump)
             {
                 DoAJump();
-                body.velocity = velocity;
+                body.linearVelocity = velocity;
 
                 //Skip gravity calculations this frame, so currentlyJumping doesn't turn off
                 //This makes sure you can't do the coyote time double jump bug
@@ -167,7 +167,7 @@ namespace GMTK.PlatformerToolkit
             //We change the character's gravity based on her Y direction
 
             //If Kit is going up...
-            if (body.velocity.y > 0.01f)
+            if (body.linearVelocity.y > 0.01f)
             {
                 if (onGround)
                 {
@@ -198,7 +198,7 @@ namespace GMTK.PlatformerToolkit
             }
 
             //Else if going down...
-            else if (body.velocity.y < -0.01f)
+            else if (body.linearVelocity.y < -0.01f)
             {
                 if (onGround)
                 //Don't change it if Kit is stood on something (such as a moving platform)
@@ -225,7 +225,7 @@ namespace GMTK.PlatformerToolkit
 
             //Set the character's Rigidbody's velocity
             //But clamp the Y variable within the bounds of the speed limit, for the terminal velocity assist option
-            body.velocity = new Vector3(velocity.x, Mathf.Clamp(velocity.y, -speedLimit, 100));
+            body.linearVelocity = new Vector3(velocity.x, Mathf.Clamp(velocity.y, -speedLimit, 100));
         }
 
         private void DoAJump()
@@ -251,7 +251,7 @@ namespace GMTK.PlatformerToolkit
                 }
                 else if (velocity.y < 0f)
                 {
-                    jumpSpeed += Mathf.Abs(body.velocity.y);
+                    jumpSpeed += Mathf.Abs(body.linearVelocity.y);
                 }
 
                 //Apply the new jumpSpeed to the velocity. It will be sent to the Rigidbody in FixedUpdate;

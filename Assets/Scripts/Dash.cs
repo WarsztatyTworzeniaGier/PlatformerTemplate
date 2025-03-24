@@ -40,7 +40,7 @@ public class Dash : MonoBehaviour
         var x = Input.GetAxis("Horizontal");
         var y = Input.GetAxis("Vertical");
         var direction = new Vector2(x, y);
-        rb.velocity = direction * dashPower;
+        rb.linearVelocity = direction * dashPower;
         currentCooldown = dashCooldown;
         
     }
