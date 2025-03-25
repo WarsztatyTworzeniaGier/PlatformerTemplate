@@ -12,6 +12,8 @@ namespace GMTK.PlatformerToolkit
 
         private characterJuice _juiceScript;
 
+        private Dash _dashScript;
+
         private PresetObject _installedPreset;
 
         private void Awake()
@@ -19,6 +21,7 @@ namespace GMTK.PlatformerToolkit
             _moveScript = GetComponent<characterMovement>();
             _jumpScript = GetComponent<characterJump>();
             _juiceScript = GetComponent<characterJuice>();
+            _dashScript = GetComponent<Dash>();
 
             InstallPresetData();
             _installedPreset.OnValidated += InstallPresetData;
@@ -52,7 +55,11 @@ namespace GMTK.PlatformerToolkit
             _jumpScript.variablejumpHeight = _preset.VariableJumpHeight;
             _moveScript.maxAirTurnSpeed = _preset.AirControlActual;
 
-            _installedPreset = _preset;
+            //DASH
+
+            _dashScript.dashPower = _preset.DashPower;
+            _dashScript.dashCooldown = _preset.DashCooldown;
+
 
             //JUICE
 
@@ -63,6 +70,8 @@ namespace GMTK.PlatformerToolkit
             _juiceScript.landDrop = _preset.LandDrop;
             _juiceScript.maxTilt = _preset.MaxTilt;
             _juiceScript.tiltSpeed = _preset.TiltSpeed;
+
+            _installedPreset = _preset;
         }
     }
 }

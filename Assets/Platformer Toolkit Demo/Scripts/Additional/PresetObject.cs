@@ -65,6 +65,14 @@ namespace GMTK.PlatformerToolkit
 
         #endregion
 
+        #region Dash
+        [SerializeField]
+        [Foldout("Dash", true)]
+        private float dashPower = 10f;
+        [SerializeField]
+        private float dashCooldown = 1.5f;
+        #endregion
+
         #region Air
 
         [SerializeField, Range(0f, 100f)]
@@ -143,6 +151,9 @@ namespace GMTK.PlatformerToolkit
         public float MaxTilt => _maxTilt;
         public float TiltSpeed => _tiltSpeed;
         public bool UseAcceleration => _useAcceleration;
+
+        public float DashPower => dashPower;
+        public float DashCooldown  => dashCooldown;
 
         #endregion
 
