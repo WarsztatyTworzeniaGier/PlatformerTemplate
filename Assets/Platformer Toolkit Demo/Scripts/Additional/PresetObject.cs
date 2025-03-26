@@ -71,6 +71,8 @@ namespace GMTK.PlatformerToolkit
         private float dashPower = 10f;
         [SerializeField]
         private float dashCooldown = 1.5f;
+        [SerializeField]
+        private int dashCountLimitInAir = 1;
         #endregion
 
         #region Air
@@ -154,6 +156,8 @@ namespace GMTK.PlatformerToolkit
 
         public float DashPower => dashPower;
         public float DashCooldown  => dashCooldown;
+
+        public int DashCountLimitInAir => dashCountLimitInAir;
 
         #endregion
 

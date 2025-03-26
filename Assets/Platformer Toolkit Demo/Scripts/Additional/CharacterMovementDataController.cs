@@ -59,7 +59,7 @@ namespace GMTK.PlatformerToolkit
 
             _dashScript.dashPower = _preset.DashPower;
             _dashScript.dashCooldown = _preset.DashCooldown;
-
+            _dashScript.dashLimit = _preset.DashCountLimitInAir;
 
             //JUICE
 
