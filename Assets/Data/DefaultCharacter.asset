@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _presetName: DefaultCharacter
   _liveUpdate: 1
-  _topSpeed: 10
+  _topSpeed: 20
   _turnSpeed: 76
   _useAcceleration: 1
-  _acceleration: 6
+  _acceleration: 12
   _deceleration: 30
-  _jumpHeight: 2
-  _timeToApex: 0.47
-  _downwardMovementMultiplier: 1
+  _jumpHeight: 8
+  _timeToApex: 1.47
+  _downwardMovementMultiplier: 2
   _variableJumpHeight: 1
   _jumpCutoff: 5.23
   _doubleJump: 0
