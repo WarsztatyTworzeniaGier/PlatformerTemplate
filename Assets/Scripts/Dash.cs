@@ -1,3 +1,4 @@
+using GMTK.PlatformerToolkit;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,19 +6,27 @@ public class Dash : MonoBehaviour
 {
     public float dashPower = 10f;
     public float dashCooldown = 1.5f;
+    public int dashLimit = 1;
+
+
     private float currentCooldown;
     public bool canIDash = true;
     public Vector2 savedVelocity;
 
     private Rigidbody2D rb;
+    private characterGround ground;
+
+    private int dashCount;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        ground = GetComponent<characterGround>();
     }
 
     void Update()
     {
+        if (ground.GetOnGround()) dashCount = 0;
         if (currentCooldown > 0)
         {
             canIDash = false;
@@ -31,6 +40,7 @@ public class Dash : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift) && canIDash == true)
         {
+            if (dashCount >= dashLimit) return;
             DoDash();
         }
     }
@@ -40,8 +50,8 @@ public class Dash : MonoBehaviour
         var x = Input.GetAxis("Horizontal");
         var y = Input.GetAxis("Vertical");
         var direction = new Vector2(x, y);
-        rb.velocity = direction * dashPower;
+        rb.linearVelocity = direction * dashPower;
         currentCooldown = dashCooldown;
-        
+        dashCount++;
     }
 }

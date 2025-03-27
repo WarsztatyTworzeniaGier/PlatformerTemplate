@@ -1,12 +1,12 @@
-using Cinemachine;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace GMTK.PlatformerToolkit
 {
     public class jumpTester : MonoBehaviour
     {
-        [SerializeField] private CinemachineVirtualCamera theCamera;
-
+        
+        [SerializeField] private CinemachineCamera theCamera;
         public float characterY = -3.89f;
         [SerializeField] private Transform characterTransform;
 

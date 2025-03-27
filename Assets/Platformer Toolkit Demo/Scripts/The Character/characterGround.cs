@@ -1,4 +1,5 @@
 using MyBox;
+using System;
 using UnityEngine;
 namespace GMTK.PlatformerToolkit
 {
@@ -6,6 +7,7 @@ namespace GMTK.PlatformerToolkit
 
     public class characterGround : MonoBehaviour
     {
+        public Action onFirstFrameInAir, onFirstFrameOnGround;
         private bool onGround;
 
         [Foldout("Collider Settings", true)]
@@ -19,10 +21,22 @@ namespace GMTK.PlatformerToolkit
         [SerializeField][Tooltip("Which layers are read as the ground")] 
         private LayerMask groundLayer;
 
+        private bool lastOnGround;
         private void Update()
         {
             //Determine if the player is stood on objects on the ground layer, using a pair of raycasts
             onGround = Physics2D.Raycast(transform.position + colliderOffset, Vector2.down, groundLength, groundLayer) || Physics2D.Raycast(transform.position - colliderOffset, Vector2.down, groundLength, groundLayer);
+
+            if (lastOnGround && !onGround) // First frame in air
+            {
+
+            }
+            else if (!lastOnGround && onGround) //First Frame On ground
+            {
+
+            }
+
+            lastOnGround = onGround;
         }
 
         private void OnDrawGizmos()
